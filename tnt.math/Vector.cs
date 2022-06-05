@@ -11,12 +11,12 @@ namespace TNT.Math
 		#region Members
 
 		/// <summary>
-		/// Offest in the X direction
+		/// Offset in the X direction
 		/// </summary>
 		protected double m_X = 0;
 
 		/// <summary>
-		/// Offseet in the Y direction
+		/// Offset in the Y direction
 		/// </summary>
 		protected double m_Y = 0;
 
@@ -104,7 +104,7 @@ namespace TNT.Math
 		}
 
 		/// <summary>
-		/// Creates a vector given and angle (for 12 o'clock position) and magnitude
+		/// Creates a vector given an angle (for 12 o'clock position) and magnitude
 		/// </summary>
 		/// <param name="angle">Angle (degrees) clockwise (negative counter-clockwise) from a verticle line</param>
 		/// <param name="magnitude">Magnitude of the vector</param>
@@ -120,7 +120,7 @@ namespace TNT.Math
 		/// Returns the dot product of this vector and vector
 		/// </summary>
 		/// <param name="vector">Vector</param>
-		/// <returns>Dot product of this vectro and vector</returns>
+		/// <returns>Dot product of this vector and vector</returns>
 		public double Dot(Vector vector)
 		{
 			return (m_X * vector.X) + (m_Y * vector.Y);
