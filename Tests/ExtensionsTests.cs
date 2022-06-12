@@ -71,6 +71,7 @@ namespace TNT.Math.Tests
 		}
 	}
 
+	[ExcludeFromCodeCoverage]
 	class TestCase<T>
 	{
 		public T testValue { get; set; }

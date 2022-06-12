@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>net6.0</TargetFramework>
@@ -11,6 +11,10 @@
     <FileVersion>$(PackageVersion)</FileVersion>
     <Authors>Tripp'n Technology, LLC.</Authors>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
+    <Description>TNT Math Classes</Description>
   </PropertyGroup>
-
+	
+	<Target Name="DeplyNugetLocal" AfterTargets="Pack" Condition="$(Configuration) == 'Release'">
+		<Exec Command="copy $(ProjectDir)bin\$(Configuration)\$(ProjectName).$(PackageVersion).nupkg D:\NugetRepo" />
+	</Target>
 </Project>

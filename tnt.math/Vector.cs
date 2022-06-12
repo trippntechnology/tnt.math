@@ -327,9 +327,9 @@ namespace TNT.Math
 		/// </summary>
 		/// <param name="obj">Vector to compare</param>
 		/// <returns>True if this vector and vector are the same, false otherwise</returns>
-		public override bool Equals(object obj)
+		public override bool Equals(object? obj)
 		{
-			Vector vector = obj as Vector;
+			Vector? vector = obj as Vector;
 			return vector != null && m_X == vector.m_X && m_Y == vector.m_Y;
 		}
 

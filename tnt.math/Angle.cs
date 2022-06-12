@@ -95,9 +95,9 @@
 		/// </summary>
 		/// <param name="obj">Angle to compare</param>
 		/// <returns>True if the angles are equal, false otherwise</returns>
-		public override bool Equals(object obj)
+		public override bool Equals(object? obj)
 		{
-			Angle angle = obj as Angle;
+			Angle? angle = obj as Angle;
 
 			return (angle != null && angle.m_Radians == m_Radians);
 		}
