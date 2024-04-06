@@ -1,17 +1,21 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net6.0</TargetFramework>
+    <TargetFramework>net8.0</TargetFramework>
     <ImplicitUsings>enable</ImplicitUsings>
     <Nullable>enable</Nullable>
     <GeneratePackageOnBuild>True</GeneratePackageOnBuild>
     <Version>2.0.0</Version>
-    <Copyright>Copyright Tripp'n Technology, LLC. 2022</Copyright>
     <AssemblyVersion>$(PackageVersion)</AssemblyVersion>
     <FileVersion>$(PackageVersion)</FileVersion>
     <Authors>Tripp'n Technology, LLC.</Authors>
+		<Copyright>Copyright 2024 $(Authors)</Copyright>
     <GenerateDocumentationFile>True</GenerateDocumentationFile>
     <Description>TNT Math Classes</Description>
+		<Company>$(Authors)</Company>
+		<IncludeSymbols>True</IncludeSymbols>
+		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
+		<Title>TNT Math</Title>
   </PropertyGroup>
 	
 	<Target Name="DeplyNugetLocal" AfterTargets="Pack" Condition="$(Configuration) == 'Release'">
