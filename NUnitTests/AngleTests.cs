@@ -21,20 +21,20 @@ namespace TNT.Math.Tests
       //}
 
       Angle a1 = new Angle(System.Math.PI);
-      Assert.That(System.Math.PI, Is.EqualTo(a1.InRadians));
-      Assert.That(180, Is.EqualTo(a1.InDegrees));
+      Assert.That(a1.InRadians, Is.EqualTo(System.Math.PI));
+      Assert.That(a1.InDegrees, Is.EqualTo(180));
 
       Angle a2 = new Angle(90, true);
-      Assert.That(System.Math.PI / 2, Is.EqualTo(a2.InRadians));
-      Assert.That(90, Is.EqualTo(a2.InDegrees));
+      Assert.That(a2.InRadians, Is.EqualTo(System.Math.PI / 2));
+      Assert.That(a2.InDegrees, Is.EqualTo(90));
 
       Angle a3 = new Angle(System.Math.PI / 4, false);
-      Assert.That(System.Math.PI / 4, Is.EqualTo(a3.InRadians));
-      Assert.That(45, Is.EqualTo(a3.InDegrees));
+      Assert.That(a3.InRadians, Is.EqualTo(System.Math.PI / 4));
+      Assert.That(a3.InDegrees, Is.EqualTo(45));
 
       Angle a4 = new Angle(a3);
-      Assert.That(System.Math.PI / 4, Is.EqualTo(a4.InRadians));
-      Assert.That(45, Is.EqualTo(a4.InDegrees));
+      Assert.That(a4.InRadians, Is.EqualTo(System.Math.PI / 4));
+      Assert.That(a4.InDegrees, Is.EqualTo(45));
     }
 
     [Test]
@@ -47,10 +47,10 @@ namespace TNT.Math.Tests
     public void ToStringTest()
     {
       Angle a1 = new Angle(247, true);
-      Assert.That("247", Is.EqualTo(a1.ToString()));
+      Assert.That(a1.ToString(), Is.EqualTo("247"));
 
       Angle a2 = new Angle(12.34, true);
-      Assert.That("12.34", Is.EqualTo(a2.ToString()));
+      Assert.That(a2.ToString(), Is.EqualTo("12.34"));
     }
 
     [Test]
@@ -61,7 +61,7 @@ namespace TNT.Math.Tests
 
       Angle sum = a1 + a2;
 
-      Assert.That(75, Is.EqualTo(System.Math.Round(sum.InDegrees, 3)));
+      Assert.That(System.Math.Round(sum.InDegrees, 3), Is.EqualTo(75));
     }
 
     [Test]

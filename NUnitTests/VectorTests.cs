@@ -10,8 +10,8 @@ namespace TNT.Math.Tests
     public void ConstructorTests()
     {
       Vector v1 = new Vector(1.234, 5.678);
-      Assert.That(1.234, Is.EqualTo(v1.X));
-      Assert.That(5.678, Is.EqualTo(v1.Y));
+      Assert.That(v1.X, Is.EqualTo(1.234));
+      Assert.That(v1.Y, Is.EqualTo(5.678));
 
       Vector v2 = new Vector(v1);
       Assert.That(v1, Is.EqualTo(v2));
@@ -19,8 +19,8 @@ namespace TNT.Math.Tests
       Vector v3 = new Vector(new PointF(0, 0), new PointF(10, 10));
       Assert.That(new Vector(10, 10), Is.EqualTo(v3));
 
-      Assert.That(10, Is.EqualTo(v3.X));
-      Assert.That(10, Is.EqualTo(v3.Y));
+      Assert.That(v3.X, Is.EqualTo(10));
+      Assert.That(v3.Y, Is.EqualTo(10));
 
       Vector v4 = new Vector(new PointF(13, 17));
 
@@ -31,44 +31,44 @@ namespace TNT.Math.Tests
     public void ConstructorTest_Angle()
     {
       Vector v = new Vector(new Angle(0, true), System.Math.Sqrt(100));
-      Assert.That(0, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(-10, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(0));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(-10));
 
       v = new Vector(new Angle(45, true), System.Math.Sqrt(200));
-      Assert.That(10, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(-10, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(10));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(-10));
 
       v = new Vector(new Angle(90, true), System.Math.Sqrt(100));
-      Assert.That(10, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(0, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(10));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(0));
 
       v = new Vector(new Angle(135, true), System.Math.Sqrt(200));
-      Assert.That(10, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(10, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(10));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(10));
 
       v = new Vector(new Angle(180, true), System.Math.Sqrt(100));
-      Assert.That(0, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(10, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(0));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(10));
 
       v = new Vector(new Angle(225, true), System.Math.Sqrt(200));
-      Assert.That(-10, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(10, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(-10));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(10));
 
       v = new Vector(new Angle(270, true), System.Math.Sqrt(100));
-      Assert.That(-10, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(0, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(-10));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(0));
 
       v = new Vector(new Angle(315, true), System.Math.Sqrt(200));
-      Assert.That(-10, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(-10, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(-10));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(-10));
 
       v = new Vector(new Angle(360, true), System.Math.Sqrt(100));
-      Assert.That(0, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(-10, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(0));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(-10));
 
       v = new Vector(new Angle(-45, true), System.Math.Sqrt(200));
-      Assert.That(-10, Is.EqualTo(System.Math.Round(v.X, 0)));
-      Assert.That(-10, Is.EqualTo(System.Math.Round(v.Y, 0)));
+      Assert.That(System.Math.Round(v.X, 0), Is.EqualTo(-10));
+      Assert.That(System.Math.Round(v.Y, 0), Is.EqualTo(-10));
     }
 
     [Test]
@@ -202,7 +202,7 @@ namespace TNT.Math.Tests
     public void AngleTests2()
     {
       Vector v1 = new Vector(new Angle(33, true), 1);
-      Assert.That(33, Is.EqualTo(System.Math.Round(v1.Angle().InDegrees)));
+      Assert.That(System.Math.Round(v1.Angle().InDegrees), Is.EqualTo(33));
 
       for (int angle = 205; angle < 220; angle++)
       {
@@ -220,8 +220,8 @@ namespace TNT.Math.Tests
       Vector vector90 = origVector.Rotate(new Angle(90, true));
       Vector vector45 = origVector.Rotate(new Angle(45, true));
 
-      Assert.That(0, Is.EqualTo(System.Math.Round(vector90.X, 3)));
-      Assert.That(1, Is.EqualTo(System.Math.Round(vector90.Y, 3)));
+      Assert.That(System.Math.Round(vector90.X, 3), Is.EqualTo(0));
+      Assert.That(System.Math.Round(vector90.Y, 3), Is.EqualTo(1));
 
       Assert.That(System.Math.Round(vector45.X, 3), Is.EqualTo(System.Math.Round(0.7069, 3)));
       Assert.That(System.Math.Round(vector45.Y, 3), Is.EqualTo(System.Math.Round(0.7069, 3)));
