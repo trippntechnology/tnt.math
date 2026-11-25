@@ -14,7 +14,7 @@
 		<Nullable>enable</Nullable>
 		<PackageReadmeFile>readme.md</PackageReadmeFile>
 		<SymbolPackageFormat>symbols.nupkg</SymbolPackageFormat>
-    <TargetFramework>net8.0</TargetFramework>
+    <TargetFramework>net10.0</TargetFramework>
 		<Title>TNT Math</Title>
     <Version>2.0.0</Version>
   </PropertyGroup>
