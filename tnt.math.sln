@@ -1,22 +1,35 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 17
-VisualStudioVersion = 17.2.32505.173
+# Visual Studio Version 18
+VisualStudioVersion = 18.13.12412.241
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TNT.Math", "TNT.Math\TNT.Math.csproj", "{8F3F4EA0-FC15-411B-A0D3-5694E1697686}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NUnitTests", "NUnitTests\NUnitTests.csproj", "{D8BE7111-584F-4D2E-9D97-5A3B3B978350}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{48D8C3E5-985B-4C2E-8CE7-B0E44E68051F}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		Directory.Build.props = Directory.Build.props
+		.github\workflows\main.yml = .github\workflows\main.yml
+		.github\workflows\publish.yml = .github\workflows\publish.yml
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug_Nuget_Local|Any CPU = Debug_Nuget_Local|Any CPU
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8F3F4EA0-FC15-411B-A0D3-5694E1697686}.Debug_Nuget_Local|Any CPU.ActiveCfg = Debug_Nuget_Local|Any CPU
+		{8F3F4EA0-FC15-411B-A0D3-5694E1697686}.Debug_Nuget_Local|Any CPU.Build.0 = Debug_Nuget_Local|Any CPU
 		{8F3F4EA0-FC15-411B-A0D3-5694E1697686}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{8F3F4EA0-FC15-411B-A0D3-5694E1697686}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8F3F4EA0-FC15-411B-A0D3-5694E1697686}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8F3F4EA0-FC15-411B-A0D3-5694E1697686}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D8BE7111-584F-4D2E-9D97-5A3B3B978350}.Debug_Nuget_Local|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8BE7111-584F-4D2E-9D97-5A3B3B978350}.Debug_Nuget_Local|Any CPU.Build.0 = Debug|Any CPU
 		{D8BE7111-584F-4D2E-9D97-5A3B3B978350}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{D8BE7111-584F-4D2E-9D97-5A3B3B978350}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{D8BE7111-584F-4D2E-9D97-5A3B3B978350}.Release|Any CPU.ActiveCfg = Release|Any CPU
